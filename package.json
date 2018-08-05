@@ -1,0 +1,30 @@
+{
+  "name": "learning-project",
+  "version": "1.0.0",
+  "description": "Learning project on nightwatch.js",
+  "author": "Anna",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaPiresh/learning-project.git"
+  },
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "dependencies": {
+    "nightwatch": "0.9.19"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "e2e-tests",
+    "nightwatch"
+  ],
+  "bugs": {
+    "url": "https://github.com/AnnaPiresh/learning-project/issues"
+  },
+  "homepage": "https://github.com/AnnaPiresh/learning-project#readme",
+  "main": "globals_path.js"
+}
