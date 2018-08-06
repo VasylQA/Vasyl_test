@@ -69,7 +69,7 @@ module.exports = {
  browser
       .useXpath()
       .waitForElementVisible('//a[contains(text(),"slippers_simple_product")]/parent::h2/following-sibling::div/following-sibling::div/button', browser.globals.smallWait)
-      .click('//a[contains(text(),"slippers_simple_product")]/parent::h2/following-sibling::div/following-sibling::div/button')
+      .click('//a[contains(text(),"slippers_simple_product")]/parent::h2/following-sibling::div/following-sibling::div/button')  //xpath can be shortened to //a[contains(@title,"slippers_simple_product")]/following-sibling::div//button
       .useCss()
       .waitForElementVisible('.success-msg', browser.globals.smallWait);
 
