@@ -62,3 +62,11 @@ typings/
 
 # idea files
 .idea
+
+# gitatrr
+.gitattributes
+
+#server
+.jar
+.exe
+selenium-webdriver
