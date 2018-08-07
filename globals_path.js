@@ -4,6 +4,6 @@ module.exports = {
   smallWait: 10000,
     firstname: "Miste",
     lastname: "Smith",
-    email: "tester@gmail.com",
+    email: "tester2@gmail.com",
     password: "Password1",
 };
