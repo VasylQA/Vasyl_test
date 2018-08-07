@@ -38,7 +38,7 @@ module.exports = {
 
     browser.assert.containsText('.error-msg', 'Invalid login or password.');
   },
-*/
+
   'Successful sign in to a website': function(browser) {
       browser
           .waitForElementVisible('#email', browser.globals.smallWait)
@@ -53,6 +53,7 @@ module.exports = {
           .click('//a[text()="Change Password"]')
           .useCss()
           .waitForElementVisible('#email', browser.globals.smallWait)
+
       browser.assert.value('#email', 'testerok666@gmail.com');
   },
 
@@ -64,8 +65,8 @@ module.exports = {
       .useCss()
       .waitForElementVisible('.page-title h1', browser.globals.smallWait);
 
-    browser.assert.containsText('.page-title h1', 'CLOTHES');
-    browser.assert.urlContains("default/clothes-anastasia.html");
+      browser.assert.containsText('.page-title h1', 'CLOTHES');
+      browser.assert.urlContains("default/clothes-anastasia.html");
   },
 
   'Add to Cart product': function(browser) {
@@ -77,23 +78,68 @@ module.exports = {
           .waitForElementVisible('.success-msg', browser.globals.smallWait)
           .waitForElementVisible("h2.product-name a", browser.globals.smallWait);
 
-          browser.assert.containsText('h2.product-name a', 'CHILDREN\'S SLIPPERS_SIMPLE_PRODUCT');
+      browser.assert.containsText('h2.product-name a', 'CHILDREN\'S SLIPPERS_SIMPLE_PRODUCT');
       browser.assert.containsText('.success-msg', 'Children\'s slippers_simple_product was added to your shopping cart.');
-  }
-   };
-
-/*
-    'Add to Cart product': function(browser){
+  },
+*/
+    'Registration of new user': function(browser){
         browser
+            .waitForElementVisible('.account-cart-wrapper a[href*="account"]', browser.globals.smallWait)
+            .click('.account-cart-wrapper a[href*="account"]')
+            .waitForElementVisible('div#header-account', browser.globals.tinyWait)
+            .click('a[href*="create"]')
+            .waitForElementVisible('#firstname', browser.globals.smallWait)
+            .setValue('#firstname', browser.globals.firstname)
+            .waitForElementVisible('#lastname', browser.globals.smallWait)
+            .setValue('#lastname', browser.globals.lastname)
+            .waitForElementVisible('#email_address', browser.globals.smallWait)
+            .setValue('#email_address', browser.globals.email)
+            .waitForElementVisible('#password', browser.globals.smallWait)
+            .setValue('#password', browser.globals.password)
+            .waitForElementVisible('#confirmation', browser.globals.smallWait)
+            .setValue('#confirmation', browser.globals.password)
+            .click('.button[title="Register"]')
             .useXpath()
-            .waitForElementVisible('//a[contains(text(),"slippers_simple_product")]/parent::h2/following-sibling::div/following-sibling::div/button', browser.globals.smallWait)
-            .click('//a[contains(text(),"slippers_simple_product")]/parent::h2/following-sibling::div/following-sibling::div/button')
+            .click('//a[text()="Change Password"]')
             .useCss()
-            .waitForElementVisible('.success-msg', browser.globals.smallWait);
+            .waitForElementVisible('#email', browser.globals.smallWait)
+            .waitForElementVisible('#firstname', browser.globals.smallWait)
+            .waitForElementVisible('#lastname', browser.globals.smallWait)
 
-        browser.assert.containsText('.success-msg', 'was added to your shopping cart.');
+        browser.assert.value('#email', browser.globals.email);
+        browser.assert.value('#firstname', browser.globals.firstname);
+        browser.assert.value('#lastname', browser.globals.lastname);
+    },
+
+    'Log out and log in': function(browser){
+        browser
+            .waitForElementVisible('.account-cart-wrapper a[href*="account"]', browser.globals.smallWait)
+            .click('.account-cart-wrapper a[href*="account"]')
+            .waitForElementVisible('div#header-account', browser.globals.tinyWait)
+            .click('a[href*="logout"]')
+            
+            .waitForElementVisible('#firstname', browser.globals.smallWait)
+            .setValue('#firstname', browser.globals.firstname)
+            .waitForElementVisible('#lastname', browser.globals.smallWait)
+            .setValue('#lastname', browser.globals.lastname)
+            .waitForElementVisible('#email_address', browser.globals.smallWait)
+            .setValue('#email_address', browser.globals.email)
+            .waitForElementVisible('#password', browser.globals.smallWait)
+            .setValue('#password', browser.globals.password)
+            .waitForElementVisible('#confirmation', browser.globals.smallWait)
+            .setValue('#confirmation', browser.globals.password)
+            .click('.button[title="Register"]')
+            .useXpath()
+            .click('//a[text()="Change Password"]')
+            .useCss()
+            .waitForElementVisible('#email', browser.globals.smallWait)
+            .waitForElementVisible('#firstname', browser.globals.smallWait)
+            .waitForElementVisible('#lastname', browser.globals.smallWait)
+
+        browser.assert.value('#email', browser.globals.email);
+        browser.assert.value('#firstname', browser.globals.firstname);
+        browser.assert.value('#lastname', browser.globals.lastname);
     }
 
 };
 
-*/
