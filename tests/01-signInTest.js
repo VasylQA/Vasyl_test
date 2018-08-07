@@ -51,8 +51,6 @@ module.exports = {
       .waitForElementVisible('.page-title h1', browser.globals.smallWait);
 
     browser.assert.containsText('.page-title h1', 'MY DASHBOARD');
-    //ToDo: write test for successful sign in
-    //pass for the account above 'QA92837465'
   },
 
    'Go to "Clothes" Category': function(browser){
@@ -65,6 +63,7 @@ module.exports = {
 
     browser.assert.containsText('.page-title h1', 'CLOTHES');
   },
+
   'Add to Cart product': function(browser){
  browser
       .useXpath()
