@@ -2,11 +2,11 @@
   "name": "learning-project",
   "version": "1.0.0",
   "description": "Learning project on nightwatch.js",
-  "author": "Anna",
+  "author": "Anna & Vasyl",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnnaPiresh/learning-project.git"
+    "url": "git+https://github.com/VasylQA/Vasyl_test.git"
   },
   "scripts": {
     "test": "nightwatch"
@@ -21,10 +21,5 @@
   "keywords": [
     "e2e-tests",
     "nightwatch"
-  ],
-  "bugs": {
-    "url": "https://github.com/AnnaPiresh/learning-project/issues"
-  },
-  "homepage": "https://github.com/AnnaPiresh/learning-project#readme",
-  "main": "globals_path.js"
+  ]
 }
