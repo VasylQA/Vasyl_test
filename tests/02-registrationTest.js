@@ -1,4 +1,4 @@
-const userEmail = 'te1234562@gmail.com';
+const userEmail = 'newte1@gmail.com';
 const userPassword = 'Password1';
 const userFirstName = 'Test First Name';
 const userLastName = 'Test Last Name';

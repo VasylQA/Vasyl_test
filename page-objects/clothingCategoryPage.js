@@ -3,11 +3,6 @@ const commands = {
         return this
             .waitForElementVisible('@clothingLinkInNavigation', this.api.globals.tinyWait)
             .click('@clothingLinkInNavigation');
-    },
-    clickAddToCartButton: function(){
-        return this
-            .waitForElementVisible('@addToCartButton', this.api.globals.tinyWait)
-            .click('@addToCartButton');
     }
 
 };
@@ -19,9 +14,7 @@ module.exports = {
     elements: {
         clothingLinkInNavigation: {
             selector: 'a[href*="clothes-anastasia.html"]'
-        },
-        addToCartButton: {
-            selecrot:  ???;
+       }
 }
 
 };
