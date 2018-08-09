@@ -3,13 +3,13 @@ const commands = {
         return this
             .waitForElementVisible('@firstName', this.api.globals.tinyWait)
             .clearValue('@firstName')
-            .setValue('@firstName', email);
+            .setValue('@firstName', firstName);
     },
     enterLastName: function(lastName){
         return this
             .waitForElementVisible('@lastName', this.api.globals.tinyWait)
             .clearValue('@lastName')
-            .setValue('@lastName', email);
+            .setValue('@lastName', lastName);
     },
     enterEmail: function(email){
         return this
@@ -21,13 +21,13 @@ const commands = {
         return this
             .waitForElementVisible('@password', this.api.globals.tinyWait)
             .clearValue('@password')
-            .setValue('@password', email);
+            .setValue('@password', password);
     },
     enterPasswordConfirmation: function(passwordConfirmation){
         return this
             .waitForElementVisible('@passwordConfirmation', this.api.globals.tinyWait)
             .clearValue('@passwordConfirmation')
-            .setValue('@passwordConfirmation', email);
+            .setValue('@passwordConfirmation', passwordConfirmation);
     },
     clickRegisterButton: function(){
         return this

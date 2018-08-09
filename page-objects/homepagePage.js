@@ -18,7 +18,7 @@ const commands = {
        .click('@registerOption');
   },
 
-  clickLogOut: function(){
+  clickLogOutButtonInHeader: function(){
      return this
        .waitForElementVisible('@logOutButton', this.api.globals.tinyWait)
        .click('@logOutButton');
