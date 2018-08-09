@@ -10,6 +10,18 @@ const commands = {
     return this
       .waitForElementVisible('@loginOption', this.api.globals.tinyWait)
       .click('@loginOption');
+  },
+
+  clickRegisterOptionInMenu: function(){
+     return this
+       .waitForElementVisible('@registerOption', this.api.globals.tinyWait)
+       .click('@registerOption');
+  },
+
+  clickLogOut: function(){
+     return this
+       .waitForElementVisible('@logOutButton', this.api.globals.tinyWait)
+       .click('@logOutButton');
   }
 };
 
@@ -24,8 +36,14 @@ module.exports = {
     accountMenu: {
       selector: 'div#header-account'
     },
+    registerOption: {
+      selector: 'a[href*="create"]'
+    },
     loginOption: {
       selector: 'a[href*="login"]'
+    },
+    logOutButton: {
+      selector: 'a[href*="logout"]'
     }
   }
 };
